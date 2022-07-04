@@ -1,0 +1,39 @@
+.color {
+  border: 1px solid black;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+/* #color-palette {
+} */
+
+#pixel-board {
+  width: 250px;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+.selected {
+}
