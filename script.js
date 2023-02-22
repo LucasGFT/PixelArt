@@ -3,6 +3,9 @@ const primeiroQuadrado = document.querySelector('.black');
 const segundoQuadrado = document.querySelector('.blue');
 const terceiroQuadrado = document.querySelector('.green');
 const quartoQuadrado = document.querySelector('.red');
+const quintoQuadrado = document.querySelector('.pink');
+const sextoQuadrado = document.querySelector('.yellow');
+const setimo = document.querySelector('.white');
 window.onload = () => {
   primeiroQuadrado.classList.add('selected');
 };
@@ -19,6 +22,9 @@ primeiroQuadrado.addEventListener('click', corClicada);
 segundoQuadrado.addEventListener('click', corClicada);
 terceiroQuadrado.addEventListener('click', corClicada);
 quartoQuadrado.addEventListener('click', corClicada);
+quintoQuadrado.addEventListener('click', corClicada);
+sextoQuadrado.addEventListener('click', corClicada);
+setimo.addEventListener('click', corClicada);
 
 function quadradoParaMudar(event) {
   const teste = exatoLugarQueSelectedEsta;
@@ -62,7 +68,15 @@ function limparCores() {
 }
 
 function aumentarPixelBoard(valorInput) {
-  const novoValor = valorInput * 40 + 50;
+  let novoValor;
+  console.log(valorInput);
+  if (valorInput < 10 && valorInput > 5) {
+    novoValor = valorInput * 40 + 50;
+  } else if (valorInput === 5) {
+    novoValor = 210;
+  } else {
+    novoValor = valorInput * 40 + 60;
+  }
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.style.width = `${novoValor}px`;
 }
@@ -73,7 +87,7 @@ function aumentarQuadrado() {
 
   const pixels = paiQuadradoDeCor.children;
   if (valorInput <= 5) valorInput = 5;
-  if (valorInput >= 50) valorInput = 50;
+  if (valorInput >= 30) valorInput = 30;
   quadradosParaColorir(valorInput * valorInput);
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
@@ -91,11 +105,11 @@ function sortear(arr) {
 }
 
 function test() {
-  const tests = ['blue', 'green', 'red'];
+  const tests = ['blue', 'green', 'red', 'pink', 'yellow'];
   const arr = sortear(tests);
   console.log(arr);
   const ola = document.querySelector('#color-palette');
-  for (let index = 1; index < 4; index += 1) {
+  for (let index = 1; index < 6; index += 1) {
     const classe = ola.children[index].classList[1];
     ola.children[index].classList.remove(classe);
     ola.children[index].classList.add(arr[index - 1]);
@@ -104,6 +118,6 @@ function test() {
 test();
 
 const button = document.querySelector('#clear-board');
-const buttonVQV = document.querySelector('#generate-board');
+const testtt = document.querySelector('#board-size');
+testtt.addEventListener('change', aumentarQuadrado);
 button.addEventListener('click', limparCores);
-buttonVQV.addEventListener('click', aumentarQuadrado);

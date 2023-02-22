@@ -1,7 +1,14 @@
 .color {
+  border-radius: 50%;
   border: 1px solid black;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.borracha {
+  height: 50px;
+  width: 50px;
   display: inline-block;
 }
 
@@ -21,11 +28,28 @@
   background-color: red;
 }
 
-/* #color-palette {
-} */
+.pink {
+  background-color: pink;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+#title {
+  font-size: 48px;
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px white;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
 
 #pixel-board {
-  width: 250px;
+  margin-top: 30px;
+  display: flex;
+  width: 210px;
+  flex-wrap: wrap;
 }
 
 .pixel {
@@ -37,3 +61,65 @@
 
 /* .selected {
 } */
+
+#board-size {
+  appearance: none;
+  marker-start: initial;
+  cursor: pointer;
+  display: inline-block;
+  width: 18em;
+  height: 0.5em;
+  position: relative;
+  border-radius: 5px;
+  background-color: #3071a9;
+  outline: none;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: center;
+}
+
+#color-palette div {
+  margin: 2px;
+}
+
+.pixels {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label label {
+  display: flex;
+  align-items: center;
+}
+
+#clear-board {
+  background-color: white;
+  color: #333;
+  border: 1px solid #333;
+  padding: 6px 12px;
+}
+
+#clear-board:hover {
+  background-color: #333;
+  color: white;
+}
+
+.contact img {
+  max-height: 50px;
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
