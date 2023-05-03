@@ -7,7 +7,6 @@
       <li>O usuário pode selecionar a cor desejada a partir de uma paleta de cores.</li>
       <li>O usuário pode clicar em um pixel para pintá-lo com a cor selecionada.</li>
       <li>O usuário pode limpar toda a tela, apagando todos os pixels coloridos.</li>
-      <li>O usuário pode exportar a imagem criada em formato PNG.</li>
     </ul>
     <h2>Como executar o projeto</h2>
     <ol>
