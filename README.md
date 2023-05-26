@@ -8,6 +8,8 @@
       <li>O usuário pode clicar em um pixel para pintá-lo com a cor selecionada.</li>
       <li>O usuário pode limpar toda a tela, apagando todos os pixels coloridos.</li>
     </ul>
+    <h2>Acessar projeto</h2>
+    <p>https://lucasgft.github.io/pixelArt/</p>
     <h2>Como executar o projeto</h2>
     <ol>
       <li>Faça o download do repositório.</li>
